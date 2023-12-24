@@ -68,8 +68,4 @@ async function createServer() {
   return app;
 }
 
-createServer().then((app) => {
-  app.listen(3000, () => {
-    console.log("HTTP server is running at http://localhost:3000");
-  });
-});
+
