@@ -1,6 +1,7 @@
 let path = require("path");
 let fsp = require("fs/promises");
 let express = require("express");
+const port = process.env.PORT || 3000;
 
 let root = process.cwd();
 let isProduction = process.env.NODE_ENV === "production";
@@ -68,4 +69,8 @@ async function createServer() {
   return app;
 }
 
-
+createServer().then((app) => {
+  app.listen(port, () => {
+    console.log(`HTTP server is running at ${port}`);
+  });
+});
