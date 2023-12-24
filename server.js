@@ -45,7 +45,7 @@ async function createServer() {
           .then((m) => m.render);
       } else {
 
-        
+
         console.log("isprod")
         template = await fsp.readFile(
           resolve("dist/client/index.html"),
@@ -67,10 +67,9 @@ async function createServer() {
   });
 
   return app;
-}
-
-createServer().then((app) => {
   app.listen(port, () => {
     console.log(`HTTP server is running at ${port}`);
   });
-});
+  
+}
+
