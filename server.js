@@ -44,6 +44,7 @@ async function createServer() {
           .then((m) => m.render);
       } else {
 
+        
         console.log("isprod")
         template = await fsp.readFile(
           resolve("dist/client/index.html"),
