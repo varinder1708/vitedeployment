@@ -1,0 +1,4 @@
+deploy on --> https://dashboard.render.com/
+build command->npm install;npm run build
+start command->npm run dev
+issues in npm run start
